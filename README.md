@@ -1,1 +1,0 @@
-"# cashpay-payment-gateway" 
