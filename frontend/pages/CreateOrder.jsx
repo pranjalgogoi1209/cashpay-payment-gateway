@@ -10,6 +10,10 @@ export default function CreateOrder() {
   const [sessionId, setSessionId] = useState(null);
   const [orderId, setOrderId] = useState(null);
 
+  // SUCCESS => paid
+  // NOT_ATTEMPTED => otp cancel
+  // EMPTY ARRAY => Direct cancel
+
   // open cashfree payment popup
   useEffect(() => {
     const openPaymentPopup = async () => {
