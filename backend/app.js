@@ -34,7 +34,7 @@ app.post("/create-order", async (req, res) => {
         customer_phone: customerPhone,
       },
       order_meta: {
-        return_url: `http://localhost:3000/check-status?order_id=${orderId}&order_status={order_status}`,
+        return_url: `http://localhost:5173/check-status?order_id=${orderId}&order_status={order_status}`,
       },
       order_note: "Test Order",
     };

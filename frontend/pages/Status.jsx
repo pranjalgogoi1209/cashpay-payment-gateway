@@ -22,6 +22,11 @@ export default function Status() {
         );
       }
     }
+    if(orderStatus==="CANCELLED"){
+      setStatusMessage(
+        "❌ Payment cancelled! Please try again."
+      );
+    }
   }, [orderIdFromParams, orderStatus]);
 
   return (

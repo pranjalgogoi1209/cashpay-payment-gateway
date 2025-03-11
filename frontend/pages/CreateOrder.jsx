@@ -25,6 +25,13 @@ export default function CreateOrder() {
       };
       const result = await cashfree.checkout(checkoutOptions);
       console.log(result);
+      if(result.error){
+        console.log(result.error.code);
+        if(result.error?.code==='payment_aborted'){ 
+          navigate(`/check-status?order_status=CANCELLED`)
+          return;
+        }
+      }
 
       // check status api call
       const checkStatus = async () => {
